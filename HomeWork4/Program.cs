@@ -43,11 +43,14 @@ Console.Write($"Сумма цифр числа {num} равна {GetSumDigits(nu
 Задача 29: Напишите программу, которая задаёт массив из m элементов и выводит их на экран.
 */
 /*
-int[] CreateRandomArray(int size, int minValue, int maxValue)
+int[] CreateArray(int size)
 {
     int[] result = new int[size];
     for(int i = 0; i < size; i++)
-        result[i] = new Random().Next(minValue, maxValue + 1);
+    {
+        Console.Write("Введите очередное число массива: ");
+        result[i] = Convert.ToInt32(Console.ReadLine());
+    }
     return result;
 }
 void ShowArray(int[] array)
@@ -58,9 +61,5 @@ void ShowArray(int[] array)
 }
 Console.Write("Введите размер массива: ");
 int size = Convert.ToInt32(Console.ReadLine());
-Console.Write("Минимальное число массива: ");
-int minValue = Convert.ToInt32(Console.ReadLine());
-Console.Write("Максимальное число массива: ");
-int maxValue = Convert.ToInt32(Console.ReadLine());
-ShowArray(CreateRandomArray(size, minValue, maxValue));
+ShowArray(CreateArray(size));
 */
